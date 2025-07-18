@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #fff;
+    background: #929292;
+    padding: 5px 10px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background: #4385c4;
+}
+
+body{
+    font-family: "Jost", sans-serif;
+}
+html {
+    font-size: 16pt;
+}
+
+#menu {
+    box-shadow: 0px 10px 10px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Color theme classes */
+.theme-white {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+.theme-dark {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+}
+.theme-dark .accordion-item{
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+}
+.theme-dark .accordion-button{
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+}
+
+.theme-dark * {
+    color: #e0e0e0 !important;
+}
+
+.theme-lightyellow {
+    background-color: #F7F3D6 !important;
+    color: #000000 !important;
+}
+
+.lightyellow,
+.lightyellow:hover {
+    background-color: #F7F3D6;
+}
+
+.theme-lightblue {
+    background-color: #7aa4c9 !important;
+    color: #ffffff !important;
+}
+
+.lightblue,
+.lightblue:hover {
+    background-color: #7aa4c9;
+}
+
+.theme-brown {
+    background-color: #3B2716 !important;
+    color: #408549 !important;
+}
+.theme-brown .accordion-item{
+   background-color: #3B2716 !important;
+    color: #408549 !important;
+}
+.theme-brown .accordion-button{
+  background-color: #3B2716 !important;
+    color: #408549 !important;
+}
+.theme-brown * {
+    color: #408549 !important;
+}
+
+.brown,
+.brown:hover {
+    background-color: #3B2716;
+    color: #408549
+}
+
+/* Ensure links and other elements adapt to theme colors */
+.theme-white a,
+.theme-dark a,
+.theme-lightyellow a,
+.theme-lightblue a,
+.theme-brown a {
+    color: inherit !important;
+}
+
+/* Image toggling classes */
+.img-hidden {
+    display: none !important;
+}
+
+.img-grayscale {
+    filter: grayscale(100%) !important;
+}
+
+
+.web {
+    color: #0540f2;
+    font-size: 64pt;
+}
+
+.main {
+    height: 900px;
+    padding-left: 193px;
+    padding-right: 193px;
+}
+
+.card-bg-1 {
+    background-image: url('media/Frame\ 1.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+}
+
+.card-bg-1 a{
+    display: flex;
+    height: 650px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 200px rgba(0, 0, 0, 0.3) inset;
+}
+
+#main {
+    height: 100%;
+    min-height: 900px;
+}
+
+.participate {
+    box-shadow: 0 0 200px rgba(0, 0, 0, 0.5) inset;
+    background-image: url('media/WpI2YRAd1xk.jpg');
+    height: 300px;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animation classes */
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+.slide-in-left {
+    animation: slideInLeft 1s ease forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight 1s ease forwards;
+}
+
+/* Center modal image */
+#imageViewerModal .modal-dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#imageViewerModal .modal-content {
+    background: transparent !important;
+    border: none !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#imageViewerModal img#modalImage {
+    max-height: 80vh;
+    max-width: 100%;
+    margin: auto;
+    display: block;
+}
+
+
