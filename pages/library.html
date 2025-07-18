@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Абилимпикс</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="">
+<header>
+        <a class="text-uppercase btn w-100 d-flex align-items-center gap-2 justify-content-center" data-bs-toggle="collapse"
+            href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eye"
+                viewBox="0 0 16 16">
+                <path
+                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
+                <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
+            </svg>
+            <span>Версия сайта для слабовидящих</span>
+        </a>
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body d-flex align-items-center" id="card">
+                <div id="accessibility-menu" class="container d-flex justify-content-between align-items-center">
+                    <div class="mb-3 text-center align-items-center">
+                        <span class="text-uppercase">Размер шрифта</span>
+                        <div class="d-flex gap-2 mt-1">
+                            <button id="font-decrease" class="btn btn-outline-dark btn-sm w-50">−</button>
+                            <button id="font-increase" type="button" class="btn btn-outline-dark btn-sm w-50">+</button>
+                        </div>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <span class="text-uppercase">Цвет сайта</span>
+                        <div class="d-flex gap-2 mt-1 flex-wrap">
+                            <button class="btn btn-sm color-theme-btn" data-theme="white">Ц</button>
+                            <button class="btn btn-sm color-theme-btn bg-dark text-white" data-theme="dark">Ц</button>
+                            <button class="btn btn-sm color-theme-btn lightyellow" data-theme="lightyellow">Ц</button>
+                            <button class="btn btn-sm color-theme-btn lightblue" data-theme="lightblue">Ц</button>
+                            <button class="btn btn-sm color-theme-btn brown" data-theme="brown">Ц</button>
+                        </div>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <span class="text-uppercase">Изображения</span>
+                        <div class="d-flex mt-1 text-center justify-content-between">
+                            <button id="img-hide" class="btn btn-outline-dark btn-sm d-flex align-items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    class="bi bi-ban" viewBox="0 0 16 16">
+                                    <path
+                                        d="M15 8a6.97 6.97 0 0 0-1.71-4.584l-9.874 9.875A7 7 0 0 0 15 8M2.71 12.584l9.874-9.875a7 7 0 0 0-9.874 9.874ZM16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0" />
+                                </svg>
+                            </button>
+                            <button id="img-grayscale"
+                                class="btn btn-outline-dark btn-sm d-flex align-items-center"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    class="bi bi-circle-half" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16" />
+                                </svg>
+                            </button> <button id="img-reset"
+                                class="btn btn-outline-dark btn-sm d-flex align-items-center"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    class="bi bi-image" viewBox="0 0 16 16">
+                                    <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                                    <path
+                                        d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="container navbar navbar-expand-lg navbar-light justify-content-between align-items-center p-3 pt-0">
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                <img src="../media/logo.png" width="40" alt="Logo" class="img-reset d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-3 text-center">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="theory.html" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Теория
+                        </a>
+                        <ul class="dropdown-menu" id="menu">
+                            <li><a class="dropdown-item" href="library.html">Библиотека компонентов</a></li>
+                            <li><a class="dropdown-item" href="carcas.html">Каркасная модель</a></li>
+                            <li><a class="dropdown-item" href="maket.html">Макет</a></li>
+                            <li><a class="dropdown-item" href="web.html">Веб-верстка</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="practic.html">Практика</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inter.html">Интерактив</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center justify-content-lg-end justify-content-center">
+                    <a href="#" class="" data-bs-toggle="modal" data-bs-target="#electronicGuideModal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-info-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                            <path
+                                d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <nav aria-label="breadcrumb" class="container mt-3">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index.html">Главная</a></li>
+            <li class="breadcrumb-item"><a href="theory.html">Теория</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Библиотека компонентов</li>
+        </ol>
+    </nav>
+    <main class="">
+        <div class="container">
+            <h2 class="display-5">Библиотека компонентов Figma</h2>
+            <p>Если каждую кнопку на сайте рисовать по отдельности, жизнь веб-дизайнера превратится в ад. Чтобы этого не
+                произошло, в Figma есть компоненты.</p><img src="../media/lib.jpg" alt="" class="rounded img-fluid">
+            <h2 class="mt-4">Что такое компонент Figma</h2>
+            <p>Компонент — это элемент, копии которого меняются вместе с ним. Например, поле ввода, аватар со статусом
+                или меню. Исходный компонент называется основным (main component), его копии — экземплярами (instances).
+            </p>
+            <h2>Что такое библиотека компонентов</h2>
+            <p>Библиотека — это файл, где хранятся основные компоненты для проекта. Технически он ничем не отличается от
+                обычного макета — его создают для удобства, чтобы брать стандартные элементы из одного и того же места.
+            </p>
+
+            <p>Для библиотек нет строгих стандартов оформления. Обычно компоненты структурируют и снабжают заголовками.
+                Их удобно группировать по секциям — например, в зависимости от устройства и типа.</p>
+
+            <h2>Зачем нужны библиотеки компонентов</h2>
+            <p><b>Экономить время.</b> Благодаря компонентам проектировка интерфейсов превращается в конструктор —
+                дизайнеру
+                нужно только перетаскивать кнопки из одного файла в другой. А благодаря переменным, стилям и замене
+                «родителя» можно быстро изменить тип элементов.</p>
+            <p><b>Эффективно работать в команде.</b> Библиотеки публикуют для всей команды, и каждый пользуется
+                элементами одной дизайн-системы. Если её изменить, компоненты обновятся у всех. При этом в Figma есть
+                контроль версий — в случае ошибки можно просто вернуть старый вариант файла.</p>
+            <p><b>Использовать готовые наработки.</b> К файлу Figma можно открыть доступ по ссылке, либо опубликовать
+                его в сообществе. Благодаря этому в интернете есть бесплатные библиотеки, которыми может пользоваться
+                каждый.</p>
+            <h2>Как создать библиотеку компонентов</h2>
+            <ul>
+                <li>
+                    <h4 class="fs-5">Подготовка рабочего пространства</h4>
+                    <ul>
+                        <li>Создание нового файла: Откройте Figma и создайте новый файл для библиотеки стилей.</li>
+                        <li class="mb-3">Организация страниц: Создайте отдельные фреймы для различных категорий
+                            компонентов
+                            (например, "Типографика", "Иконки", "Кнопки" и т.д.).
+                        </li>
+                        <img src="../media/1.jpg" alt="" class="img-fluid mb-3">
+                    </ul>
+                </li>
+                <li>
+                    <h4 class="fs-5">Типографика</h4>
+                    <ul>
+                        <li class="mb-3">Введем в текстовое поле «Заголовок H1», и определим шрифт, размер для нашего
+                            заголовка</li>
+                        <img src="../media/2.jpg" alt="" class="mb-3 img-fluid">
+                        <li class="mb-3">Сохраняем пресет в библиотеку стилей. Для этого нажимаем на кнопку «Принять
+                            стили», создаем
+                            новый текстовый стиль добавив к нему название и описание.</li>
+                        <img src="../media/3.jpg" alt="" class="mb-3 img-fluid">
+                        <li class="mb-3">Создать пресеты для заголовков H2, H3, надписей</li>
+                        <img src="../media/4.jpg" alt="" class="img-fluid mb-3">
+                    </ul>
+                </li>
+                <li>
+                    <h4 class="fs-5">Иконки социальных сетей</h4>
+                    <ul>
+                        <li class="mb-3">Перейти на любой бесплатный сайт с векторными иконками, найти
+                            «Вконтакте», «Одноклассники», «Телеграмм» и сохранить их в формате svg</li>
+                        <img src="../media/icons.jpg" alt="" class="mb-3 img-fluid">
+                        <li class="mb-3">Добавить иконки на фрейм и создать компонент для каждой из них. Для этого
+                            выбираем фрейм с иконкой, и зажимаем Ctrl+Alt+K</li>
+                        <img src="../media/icons2.jpg" alt="" class="mb-3 img-fluid">
+                        <li class="mb-3">Теперь в нашей библиотеке будут отображаться наши иконки</li>
+                        <img src="../media/icons3.jpg" alt="" class="img-fluid mb-3">
+                    </ul>
+                </li>
+                <li>
+                    <h4 class="fs-5">Кнопки</h4>
+                    <ul>
+                        <li class="">Создаем 3 фрейма: «Кнопки (обычное состояние)», «Кнопки (при наведении)»,
+                            «Кнопки (при нажатии)»</li>
+                        <li class="mb-3">Создадим кнопку «Подробнее», придерживаясь стилю сайта</li>
+                        <img src="../media/btn.jpg" alt="" class="mb-3 img-fluid">
+                        <img src="../media/btn2.jpg" alt="" class="mb-3 img-fluid">
+                        <li class="mb-3">Создаем компонент для каждой кнопки и объединяем их между собой, для этого
+                            выделим кнопку «Подробнее» в трех состояниях и жмем «Объединить компоненты»</li>
+                        <img src="../media/btn3.jpg" alt="" class="img-fluid mb-3">
+                        <li class="mb-3">Переходим во вкладку «Прототип». Выбираем первую кнопку, жмем «+» и переносим
+                            стрелку на вторую кнопку. Задаем настройку «при наведении», анимацию. Затем проделываем то
+                            же самое, но переносим стрелку на третью кнопку, выбрав триггер «при нажатии»</li>
+                        <img src="../media/btn4.jpg" alt="" class="img-fluid mb-3">
+                        <li class="mb-3">Теперь кнопка отображается в компонентах в библиотеке стилей</li>
+                        <img src="../media/btn5.jpg" alt="" class="img-fluid mb-3">
+                    </ul>
+                </li>
+                <li>
+                    <h4 class="fs-5">Навигационные ссылки</h4>
+                    <ul>
+                        <li class="mb-3">Создадим фрейм и добавим нашу будущую ссылку-якорь «Главная» в трех
+                            состояниях (статичное, при наведении, при нажатии)</li>
+                        <img src="../media/links.jpg" alt="" class="img-fluid mb-3">
+                        <li class="mb-3">Используя пункт с кнопками, сделать анимацию для ссылки</li>
+                    </ul>
+                </li>
+                <li>
+                    <h4 class="fs-5">Баннер</h4>
+                    <ul>
+                        <li class="mb-3">Создаем фрейм 1920х785, заполним его контентом (фото, заголовок, описание,
+                            кнопка «Подробнее»), посвященным нашему сайту. Также добавим дополнительные элементы, такие
+                            как стрелки влево и вправо, точки внизу баннера. Кнопку выбираем из уже готового компонента
+                            в библиотеке.</li>
+                        <img src="../media/ban.jpg" alt="" class="img-fluid mb-3">
+                        <li class="mb-3">Дублируем фрейм 2 раза, изменив контент слайдов.</li>
+                        <img src="../media/ban2.jpg" alt="" class="img-fluid mb-3">
+                        <li class="mb-3">Переходим во вкладку «Прототип» жмем на «+» на первом слайде у кнопки «вправо»
+                            и переносим стрелку на следующий фрейм. Во втором слайде переносим стрелку на третий фрейм.
+                            Проделать подобное с кнопками «влево» и точками снизу. </li>
+                        <img src="../media/ban3.jpg" alt="" class="img-fluid mb-3">
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </main>
+<!-- Image viewer modal -->
+<div class="modal fade" id="imageViewerModal" tabindex="-1" aria-labelledby="imageViewerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-transparent border-0">
+      <div class="modal-body p-0">
+        <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        <img src="" id="modalImage" class="img-fluid rounded" alt="Image preview">
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="bg-dark text-light mt-3">
+    <div class="container d-flex justify-content-between align-items-center">
+        <p class="mt-3">Электронное
+            пособие для подготовки к чемпионату<br>Абилимпикс по компетенции «Веб-дизайн»</p>
+        <p class="mt-3">© Copyright 2025</p>
+    </div>
+</footer>
+    <button onclick="scrollToTop()" href="#top" id="back-to-top" class="back-to-top" title="Back to top">▲</button>
+    <!-- Modal -->
+    <div class="modal fade" id="electronicGuideModal" tabindex="-1" aria-labelledby="electronicGuideModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="electronicGuideModalLabel">Электронное пособие по чемпионату
+                        Абилимпикс</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Данное электронное пособие предназначено для участников чемпионата Абилимпикс по компетенции
+                        веб-дизайн. В пособии содержатся методические материалы, рекомендации и практические
+                        задания, которые помогут подготовиться к соревнованиям и повысить уровень профессиональных
+                        навыков.</p>
+                    <p>Пособие охватывает основные темы веб-дизайна, включая проектирование интерфейсов, работу с
+                        графическими редакторами, основы верстки и современные тренды в веб-разработке.</p>
+                    <p>Использование электронного пособия позволит участникам более эффективно подготовиться к
+                        чемпионату и успешно выполнить конкурсные задания.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+   <script src="../script.js"></script>
+</body>
+
+</html>

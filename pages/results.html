@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Результаты теста</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  h1 {
+    margin-bottom: 20px;
+  }
+  #score {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  a {
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 18px;
+  }
+</style>
+</head>
+<body>
+<h1>Результаты теста</h1>
+<div id="score">Загрузка результатов...</div>
+<div id="timer" style="font-size: 20px; font-weight: bold; margin-top: 10px; color: black; display:none;">Время: 00:00</div>
+<a href="practic.html">Вернуться к тесту</a>
+
+<script>
+  function getQueryParams() {
+    const params = {};
+    window.location.search.substring(1).split("&").forEach(pair => {
+      const [key, value] = pair.split("=");
+      params[key] = decodeURIComponent(value);
+    });
+    return params;
+  }
+
+  const params = getQueryParams();
+  const correctCount = params.correctCount || 0;
+  const score = params.score || 0;
+
+  const scoreDiv = document.getElementById('score');
+  scoreDiv.textContent = `Вы ответили правильно на ${correctCount} из 10 вопросов. Ваша оценка: ${score} из 5.`;
+
+  // Timer logic to continue countdown if test time remains
+  const timerDisplay = document.getElementById('timer');
+  const storedStartTime = localStorage.getItem('testStartTime');
+  const storedDuration = localStorage.getItem('testDuration');
+  let timerInterval;
+
+  function startTimer(duration) {
+    let timer = duration, minutes, seconds;
+    timerDisplay.style.display = 'block';
+
+    timerInterval = setInterval(function () {
+      minutes = parseInt(timer / 60, 10);
+      seconds = parseInt(timer % 60, 10);
+
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      timerDisplay.textContent = "Время: " + minutes + ":" + seconds;
+
+      if (timer <= 60 && timer > 59) {
+        timerDisplay.style.color = 'red'; // Highlight red at 1 minute remaining
+      }
+
+      if (--timer < 0) {
+        clearInterval(timerInterval);
+        alert("Время вышло! Тест будет автоматически отправлен.");
+        localStorage.removeItem('testStartTime');
+        localStorage.removeItem('testDuration');
+        window.location.href = 'practic.html';
+      }
+    }, 1000);
+  }
+
+  if (storedStartTime && storedDuration) {
+    const elapsed = Math.floor((Date.now() - parseInt(storedStartTime)) / 1000);
+    const remaining = parseInt(storedDuration) - elapsed;
+    if (remaining > 0) {
+      startTimer(remaining);
+    } else {
+      localStorage.removeItem('testStartTime');
+      localStorage.removeItem('testDuration');
+    }
+  }
+</script>
+</body>
+</html>
